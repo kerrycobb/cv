@@ -1,0 +1,12 @@
+*.aux
+*.bbl
+*.blg
+*.dvi
+*.xml
+*.fls
+*.fdb_latexmk
+*.log
+tmp.tex
+*.DS_Store
+*.bcf
+*.out
