@@ -1,6 +1,5 @@
 
-\nocite{*}
-% Reads pubs from pubs.bib file 
+\nocite{*} % No in text citations 
 
 %% Include only publications that are part of a book
 % \printbibliography[
@@ -8,20 +7,23 @@
 %     type=inbook,
 % ]
 
-%% Include only publications that are not published in bioRxiv
-\defbibcheck{pubs}{\iffieldequalstr{journal}{bioRxiv}{\skipentry}{}}
-\printbibliography[
-    title=Peer Reviewed Publications,
-    type=article,
-    check=pubs
-]
+% %% Include only publications that are not published in bioRxiv
+% \defbibcheck{pubs}{\iffieldequalstr{journal}{bioRxiv}{\skipentry}{}}
+% \printbibliography[
+%     title=Peer Reviewed Publications,
+%     type=article,
+%     check=pubs
+% ]
 
-%% Include only publications that are published in bioRxiv
-% TODO: Doesn't currently work. Need to figure out why.
-\defbibcheck{preprints}{\iffieldequalstr{journal}{bioRxiv}{}{\skipentry}}
-\printbibliography[
-    title=Preprints,
-    type=article,
-    check=preprints
-]
+% %% Include only publications that are published in bioRxiv
+% % TODO: Doesn't currently work. Need to figure out why.
+% \defbibcheck{preprints}{\iffieldequalstr{journal}{bioRxiv}{}{\skipentry}}
+% \printbibliography[
+%     title=Preprints,
+%     type=article,
+%     check=preprints
+% ]
+
+
+\printbibliography[title=Publications]
 

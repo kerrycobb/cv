@@ -1,20 +1,53 @@
-\input{preamble.tex}
-\input{macros.tex}
+
+\documentclass[a4paper, 10pt]{article}
+\usepackage[margin=0.75in]{geometry}
+\usepackage{fontawesome5}
+\usepackage{multirow}
+\usepackage{ifthen}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\usepackage{enumitem}
+
+\hypersetup{
+    colorlinks=true,
+    urlcolor=blue,
+}
+
+\usepackage[
+    style=apa,
+    backend=biber,
+    isbn=false,
+    url=false,
+    sorting=ydnt
+]{biblatex}
+\addbibresource{pubs.bib}
+
+% Bold my name in publications list
+% Adds bold to any names appearing in AUTHOR+an field of bibtex file
+\renewcommand*{\mkbibnamegiven}[1]{%
+  \ifitemannotation{highlight}
+    {\textbf{#1}}
+    {#1}}
+
+\renewcommand*{\mkbibnamefamily}[1]{%
+  \ifitemannotation{highlight}
+    {\textbf{#1}}
+    {#1}}
+
+% \input{macros.tex}
 
 \begin{document}
-
-\raggedright
 
 \input{sections/header}
 \input{sections/education}
 \input{sections/publications}
 \input{sections/presentations}
 \input{sections/teaching}
-\input{sections/service}
+% \input{sections/service}
 \input{sections/outreach}
 % \input{sections/mentoring}
 \input{sections/software}
-\input{sections/affiliations}
+% \input{sections/affiliations}
 \input{sections/field}
 
 \end{document}
